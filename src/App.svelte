@@ -17,10 +17,10 @@
     if (!service) return;
 
     const response = await fetch(
-      `/service_zones/${service.replace(/ /g, "_")}.geojson`
+      `/service_zones/zones2/${service.replace(/ /g, "_")}.geojson`
     );
     const geoJsonData = await response.json();
-
+``
     if (geoJsonLayer) {
       geoJsonLayer.remove();
     }
